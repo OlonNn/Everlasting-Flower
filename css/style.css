@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap");
+* {
+  @font-face {
+    font-family: "Brush Script MT";
+    src: url("../font/Brush Script MT/BRUSHSCI.TTF");
+  }
+  font-family: Brush Script MT;
+}
+
+body {
+  color: azure;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+.greetings {
+  font-size: 6rem;
+  font-weight: 900;
+}
+.greetings > span {
+  animation: glow 2.5s ease-in-out infinite;
+}
+@keyframes glow {
+  0%,
+  100% {
+    color: #fff;
+    text-shadow: 0 0 12px #6024ec, 0 0 50px #6024ec, 0 0 100px #6024ec;
+  }
+  10%,
+  90% {
+    color: #111;
+    text-shadow: none;
+  }
+}
+.greetings > span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.greetings > span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.greetings > span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.greetings > span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.greetings > span:nth-child(6) {
+  animation-delay: 1s;
+}
+.greetings > span:nth-child(7) {
+  animation-delay: 1.2s;
+}
+.greetings > span:nth-child(8) {
+  animation-delay: 1.4s;
+}
+.greetings > span:nth-child(9) {
+  animation-delay: 1.6s;
+}
+.greetings > span:nth-child(10) {
+  animation-delay: 1.8s;
+}
+.greetings > span:nth-child(11) {
+  animation-delay: 2s;
+}
+
+.description {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.button a {
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: #ffffff;
+}
+
+button {
+  padding: 0.8em 1.8em;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #6024ec;
+  border: 2px solid #6024ec;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1;
+  transition: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+button:before {
+  content: "";
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: 0.5s ease;
+  transform: translate(-50%, -50%) rotate(45deg);
+  display: block;
+  z-index: -1;
+  background-color: #a367b1;
+}
+button:hover::before {
+  width: 105%;
+}
+button:hover {
+  color: #111;
+}
+
+@media screen and (max-width: 574px) {
+  .greetings {
+    display: block;
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  .description {
+    font-size: 1rem;
+  }
+
+  .button a {
+    font-size: 0.5rem;
+  }
+}
+
+.button a span {
+  position: absolute;
+  display: block;
+}
+
+.button a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f4c003);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.button a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #f4bc03);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.button a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #f4dc03);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.button a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #f4b003);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
